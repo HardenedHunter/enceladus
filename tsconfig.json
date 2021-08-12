@@ -9,8 +9,10 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "strictPropertyInitialization": true,
-    "typeRoots": ["@types", "./node_modules/@types"]
+    "strictPropertyInitialization": false,
+    "typeRoots": ["@types", "./node_modules/@types"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src", "@types"]
 }
