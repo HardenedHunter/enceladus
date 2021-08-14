@@ -1,22 +1,26 @@
 import express from 'express';
-import env from './common/env';
 import logger from './common/logging';
-import httpLogger from './middleware/httpLogging';
+import env from './startup/env';
 import db from './startup/db';
+import routes from './startup/routes';
 
 // Errors are caught and logged by Winston
 process.on('uncaughtException', () => process.exit(1));
 process.on('unhandledRejection', () => process.exit(1));
 
-env.assertAllVariablesExist();
-db.testConnection();
+const runAssertions = async () => {
+  env.assertAllVariablesExist();
+  await db.assertDatabaseIsAvailable();
+};
 
-const app = express();
+const main = async () => {
+  await runAssertions();
+  const app = express();
+  routes.attachHandlers(app);
+  const port = process.env.PORT || 9000;
+  app.listen(port, () => {
+    logger.info(`Listening on ${port}.`);
+  });
+};
 
-app.use(httpLogger);
-
-const port = process.env.PORT || 9000;
-
-app.listen(port, () => {
-  logger.info(`Listening on ${port}.`);
-});
+main();

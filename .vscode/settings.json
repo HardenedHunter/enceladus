@@ -4,6 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.fontSize": 14,
-  "editor.tabSize": 4
+  "editor.fontSize": 14
 }

@@ -1,7 +1,7 @@
 import sequelize from '../common/db';
 import logger from '../common/logging';
 
-export const testConnection = async () => {
+export const assertDatabaseIsAvailable = async () => {
   try {
     logger.info('Establishing database connection...');
     await sequelize.authenticate();
@@ -17,5 +17,5 @@ export const testConnection = async () => {
 };
 
 export default {
-  testConnection,
+  assertDatabaseIsAvailable,
 };
