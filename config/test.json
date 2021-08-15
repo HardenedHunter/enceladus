@@ -1,5 +1,6 @@
 {
   "jwtPrivateKey": "stub",
   "connectionString": "stub",
-  "clientOrigin": "stub"
+  "clientOrigin": "stub",
+  "hashCycles": "10"
 }

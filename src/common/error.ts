@@ -47,6 +47,15 @@ export class EntityAlreadyExistsError extends HttpError {
   }
 }
 
+export class InvalidCredentialsError extends HttpError {
+  constructor(
+    message: string = 'Invalid username or password.',
+    status: number = 401
+  ) {
+    super(message, status);
+  }
+}
+
 export class InvalidRefreshTokenError extends HttpError {
   constructor(
     message: string = 'Invalid refresh token.',

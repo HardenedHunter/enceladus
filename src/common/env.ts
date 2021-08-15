@@ -4,6 +4,7 @@ export const variables = [
   'jwtPrivateKey',
   'connectionString',
   'clientOrigin',
+  'hashCycles',
 ] as const;
 
 export type EnvironmentVariable = typeof variables[number];

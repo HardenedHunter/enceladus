@@ -1,5 +1,6 @@
 {
   "jwtPrivateKey": "developmentKey",
   "connectionString": "postgres://postgres:root@localhost:5432/saturn",
-  "clientOrigin": "http://localhost:3000"
+  "clientOrigin": "http://localhost:3000",
+  "hashCycles": 10
 }

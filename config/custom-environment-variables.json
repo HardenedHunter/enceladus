@@ -1,5 +1,6 @@
 {
   "jwtPrivateKey": "saturn_jwtPrivateKey",
   "connectionString": "saturn_db",
-  "clientOrigin": "saturn_clientOrigin"
+  "clientOrigin": "saturn_clientOrigin",
+  "hashCycles": "saturn_hashCycles"
 }
