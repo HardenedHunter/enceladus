@@ -1,4 +1,3 @@
-import sequelize from '../common/db';
 import logger from '../common/logging';
 import env, { variables } from '../common/env';
 import { EnvironmentVariableError } from '../common/error';

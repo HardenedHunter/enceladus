@@ -11,3 +11,6 @@
 
 # logging
 /logs
+
+# dist
+/lib
